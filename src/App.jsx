@@ -1,10 +1,9 @@
-import CardNote from "./components/CardNote";
+import Home from "./pages/Home";
 
 const App = () => {
     return(
         <>
-            <h1>My notes</h1>
-            <CardNote />
+            <Home />
         </>
     )
 }
