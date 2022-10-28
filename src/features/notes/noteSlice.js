@@ -3,11 +3,13 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = [
     {
         title: 'Note 1',
-        content: ''
+        content: '',
+        dateUpdated: Date.now() 
     },
     {
         title: 'Note 2',
-        content: ''
+        content: '',
+        dateUpdated: Date.now()
     }
 ]
 
