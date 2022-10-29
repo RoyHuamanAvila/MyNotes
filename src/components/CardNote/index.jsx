@@ -8,6 +8,9 @@ const CardNote = ({title, dateUpdated}) => {
                 <p className="title">{title}</p>
                 <p className="date-updated">{dateUpdated}</p>
                 <div className="card-buttons">
+                    <span className="material-icons-sharp">archive</span>
+                    <span className="material-icons-sharp">edit</span>
+                    <span className="material-icons-sharp">delete_forever</span>
                 </div>
             </div>
         </div>
