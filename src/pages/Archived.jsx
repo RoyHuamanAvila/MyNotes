@@ -12,7 +12,7 @@ const Archived = () => {
             <div className="notes-list">
                 {
                     notes.filter(note => note.archived)
-                        .map(note=> <CardNote title={note.title} dateUpdated={note.dateUpdated}/>)
+                        .map(note=> <CardNote note={note}/>)
                 }
             </div>
         </div>
