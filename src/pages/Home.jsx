@@ -15,7 +15,9 @@ const Home = () => {
             </header>
             <div className="notes-list">
                 {
-                    notes.map(note => <CardNote title={note.title} dateUpdated={note.dateUpdated}/>)
+                    notes
+                        .filter(note => !note.archived)
+                        .map(note => <CardNote title={note.title} dateUpdated={note.dateUpdated}/>)
                 }
             </div>
         </div>

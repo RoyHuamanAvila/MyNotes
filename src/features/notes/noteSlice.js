@@ -21,6 +21,12 @@ export const noteSlice = createSlice({
     reducers: {
         createNote: (state, action) => {
 
+        },
+        editNote: (state, action) => {
+
+        },
+        deleteNote: (state, action) => {
+            
         }
     }
 })
