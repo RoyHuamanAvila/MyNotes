@@ -24,10 +24,10 @@ const NoteList = ({ inArchive }) => {
             {
                 inArchive ? (
                     notes.filter(note => note.archived)
-                        .map(note => <CardNote note={note} handleEditNote={handleEditNote} />)
+                        .map(note => <CardNote key={note._id} note={note} handleEditNote={handleEditNote} />)
                 ) : (
                     notes.filter(note => !note.archived)
-                        .map(note => <CardNote note={note} handleEditNote={handleEditNote} />)
+                        .map(note => <CardNote key={note._id} note={note} handleEditNote={handleEditNote} />)
                 )
             }
             <Modal open={openModal} onClose={handleCloseModal}>
