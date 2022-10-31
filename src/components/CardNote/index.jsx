@@ -1,7 +1,6 @@
-import { Modal } from "@mui/material";
+const CardNote = ({ note, handleEditNote }) => {
 
-const CardNote = ({note, handleEditNote}) => {
-    return(
+    return (
         <div className="card">
             <div className="card-icon">
                 <span className="material-icons-sharp">sticky_note_2</span>

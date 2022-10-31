@@ -4,14 +4,14 @@ const initialState = [
     {
         _id: '1',
         title: 'Note 1',
-        content: '',
+        content: 'Description note 1',
         dateUpdated: Date.now(),
         archived: false
     },
     {
         _id: '2',
         title: 'Note 2',
-        content: '',
+        content: 'Description note 2',
         dateUpdated: Date.now(),
         archived: true
     }
