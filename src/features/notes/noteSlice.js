@@ -29,9 +29,25 @@ export const noteSlice = createSlice({
         },
         deleteNote: (state, action) => {
             
+        },
+        archiveNote: (state, action) => {
+            const id = action.payload;
+            const foundNote = state.find(note => note._id === id)
+
+            if(foundNote) {
+                foundNote.archived = true;
+            }
+        },
+        unArchiveNote: (state, action) => {
+                        const id = action.payload;
+            const foundNote = state.find(note => note._id === id)
+
+            if(foundNote) {
+                foundNote.archived = false;
+            }
         }
     }
 })
 
-export const {createNote} = noteSlice.actions; 
+export const {createNote, archiveNote, unArchiveNote} = noteSlice.actions; 
 export default noteSlice.reducer;

@@ -18,7 +18,9 @@ const Home = () => {
             </header>
             <NoteList />
             <Modal open={openModal} onClose={() => setOpenModal(false)}>
-                <ModalNote />
+                <>
+                    <ModalNote />
+                </>
             </Modal>
         </div>
     )
