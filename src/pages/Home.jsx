@@ -7,14 +7,19 @@ import { Modal } from "@mui/material";
 import NoteList from "../components/NoteList";
 
 const Home = () => {
-    return(
+    const [openModal, setOpenModal] = useState(false);
+
+    return (
         <div id="home">
             <header>
                 <h1>My Notes</h1>
-                <button className="button-create">Create note</button>
+                <button onClick={() => setOpenModal(true)} className="button-create">Create note</button>
                 <Link to='/archived-notes'>Archived notes</Link>
             </header>
             <NoteList />
+            <Modal open={openModal} onClose={() => setOpenModal(false)}>
+                <ModalNote />
+            </Modal>
         </div>
     )
 }

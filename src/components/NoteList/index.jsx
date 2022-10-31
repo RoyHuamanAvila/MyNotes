@@ -4,7 +4,7 @@ import { useState } from "react";
 import CardNote from "../CardNote";
 import ModalNote from "../ModalNote";
 
-const NoteList = () => {
+const NoteList = ({ inArchive }) => {
     const notes = useSelector(state => state.notes);
     const [openModal, setOpenModal] = useState(false);
     const [noteEdit, setNoteEdit] = useState({});
@@ -22,9 +22,13 @@ const NoteList = () => {
     return (
         <div className="notes-list">
             {
-                notes
-                    .filter(note => !note.archived)
-                    .map(note => <CardNote handleEditNote={handleEditNote} key={note._id} note={note} />)
+                inArchive ? (
+                    notes.filter(note => note.archived)
+                        .map(note => <CardNote note={note} handleEditNote={handleEditNote} />)
+                ) : (
+                    notes.filter(note => !note.archived)
+                        .map(note => <CardNote note={note} handleEditNote={handleEditNote} />)
+                )
             }
             <Modal open={openModal} onClose={handleCloseModal}>
                 <>

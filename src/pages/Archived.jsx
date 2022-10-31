@@ -1,22 +1,17 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import CardNote from "../components/CardNote";
+import NoteList from "../components/NoteList";
 
 const Archived = () => {
     const notes = useSelector(state => state.notes);
 
-    return(
+    return (
         <div id="archived">
             <h1>Archived notes</h1>
             <Link to='/'>Go back to unarchived notes</Link>
-            <div className="notes-list">
-                {
-                    notes.filter(note => note.archived)
-                        .map(note=> <CardNote note={note}/>)
-                }
-            </div>
+            <NoteList inArchive={true} />
         </div>
     )
-} 
+}
 
 export default Archived;
