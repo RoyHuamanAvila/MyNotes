@@ -1,7 +1,11 @@
+import { Modal } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { archiveNote, unArchiveNote } from "../../features/notes/noteSlice";
+import { useState } from "react";
+import WindowConfirmation from "../WindowConfirmation";
 
 const CardNote = ({ note, handleEditNote }) => {
+    const [openConfirmModal, setOpenConfirmModal] = useState(false);
 
     const dispatch = useDispatch();
 
@@ -30,9 +34,14 @@ const CardNote = ({ note, handleEditNote }) => {
                         )
                     }
                     <span className="material-icons-sharp" onClick={() => handleEditNote(note)}>edit</span>
-                    <span className="material-icons-sharp">delete_forever</span>
+                    <span className="material-icons-sharp" onClick={() => setOpenConfirmModal(true)}>delete_forever</span>
                 </div>
             </div>
+            <Modal open={openConfirmModal} onClose={() => setOpenConfirmModal(false)}>
+                <>
+                    <WindowConfirmation noteID={note._id} setCloseModal={setOpenConfirmModal} />
+                </>
+            </Modal>
         </div>
     )
 }

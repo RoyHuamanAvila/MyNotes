@@ -28,7 +28,7 @@ export const noteSlice = createSlice({
 
         },
         deleteNote: (state, action) => {
-            
+            console.log(action.payload);
         },
         archiveNote: (state, action) => {
             const id = action.payload;
@@ -39,7 +39,7 @@ export const noteSlice = createSlice({
             }
         },
         unArchiveNote: (state, action) => {
-                        const id = action.payload;
+            const id = action.payload;
             const foundNote = state.find(note => note._id === id)
 
             if(foundNote) {
@@ -49,5 +49,5 @@ export const noteSlice = createSlice({
     }
 })
 
-export const {createNote, archiveNote, unArchiveNote} = noteSlice.actions; 
+export const {createNote, archiveNote, unArchiveNote, deleteNote} = noteSlice.actions; 
 export default noteSlice.reducer;
