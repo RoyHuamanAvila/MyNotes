@@ -1,3 +1,4 @@
+import './styles.css';
 import { Modal } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { archiveNote, unArchiveNote } from "../../features/notes/noteSlice";
@@ -19,12 +20,12 @@ const CardNote = ({ note, handleEditNote }) => {
 
     return (
         <div className="card">
-            <div className="card-icon">
-                <span className="material-icons-sharp">sticky_note_2</span>
+            <div>
+                <span className="material-icons-sharp card-icon">sticky_note_2</span>
             </div>
             <div className="card-content">
-                <p className="title">{note?.title}</p>
-                <p className="date-updated">{note?.dateUpdated}</p>
+                <p className="card-title">{note?.title}</p>
+                <p className="date-updated">{`Last edited: ${note?.dateUpdated}`}</p>
                 <div className="card-buttons">
                     {
                         note.archived ? (

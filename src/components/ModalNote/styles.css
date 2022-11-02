@@ -1,0 +1,33 @@
+.note-modal{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.content-modal{
+    background-color: white;
+    padding: 10px;
+    min-width: 500px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.input-container textarea{
+    resize: none;
+    width: 400px;
+    height: 120px;
+}
+
+.input-container input{
+    width: 400px;
+}
+
+.buttons-modal{
+    display: flex;
+    align-self: flex-end;
+    gap: 5px;
+}

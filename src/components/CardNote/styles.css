@@ -1,0 +1,32 @@
+.card {
+    border: 1px solid black;
+    display: flex;
+    width: 390px;
+}
+
+.card-icon{
+    font-size: 100px !important;
+}
+
+.card-title{
+    font-weight: 600;
+}
+
+.card-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px;
+}
+
+.card-content p{
+    margin: 0px 0px 10px 0px;
+}
+
+.card-buttons{
+    align-self: flex-end;
+}
+
+.card-buttons span {
+    cursor: pointer;
+}

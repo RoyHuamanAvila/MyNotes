@@ -1,3 +1,4 @@
+import './styles.css';
 import { Modal } from "@mui/material";
 import { useSelector } from "react-redux";
 import { useState } from "react";
