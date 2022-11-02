@@ -9,9 +9,13 @@ import NoteList from "../components/NoteList";
 const Home = () => {
     const [openModal, setOpenModal] = useState(false);
 
+    const handleCloseModal = () => {
+        setOpenModal(false);
+    }
+
     return (
         <div id="home">
-            <header>
+            <header className="header-page">
                 <h1>My Notes</h1>
                 <button onClick={() => setOpenModal(true)} className="button-create">Create note</button>
                 <Link to='/archived-notes'>Archived notes</Link>
@@ -19,7 +23,7 @@ const Home = () => {
             <NoteList />
             <Modal open={openModal} onClose={() => setOpenModal(false)}>
                 <>
-                    <ModalNote />
+                    <ModalNote handleCloseModal={handleCloseModal} />
                 </>
             </Modal>
         </div>

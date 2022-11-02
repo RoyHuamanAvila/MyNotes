@@ -14,6 +14,13 @@ const initialState = [
         content: 'Description note 2',
         dateUpdated: Date.now(),
         archived: true
+    },
+    {
+        _id: '3',
+        title: 'Note 3',
+        content: 'Description note 3',
+        dateUpdated: Date.now(),
+        archived: false
     }
 ]
 

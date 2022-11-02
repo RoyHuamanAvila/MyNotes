@@ -1,9 +1,10 @@
+import './App.css';
 import Home from "./pages/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Archived from "./pages/Archived";
 
 const App = () => {
-    return(
+    return (
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home />} />

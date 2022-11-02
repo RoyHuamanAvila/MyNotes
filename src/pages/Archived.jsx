@@ -7,8 +7,10 @@ const Archived = () => {
 
     return (
         <div id="archived">
-            <h1>Archived notes</h1>
-            <Link to='/'>Go back to unarchived notes</Link>
+            <header className="header-page">
+                <h1>Archived notes</h1>
+                <Link to='/'> &lt; Go back to unarchived notes</Link>
+            </header>
             <NoteList inArchive={true} />
         </div>
     )
